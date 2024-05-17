@@ -1,11 +1,10 @@
-// src/components/CustomNavbar.js
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 const CustomNavbar = ({ cities = [] }) => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="lg" data-bs-theme="dark">
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>City Explorer</Navbar.Brand>

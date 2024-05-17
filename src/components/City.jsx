@@ -1,4 +1,3 @@
-// src/components/City.js
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
