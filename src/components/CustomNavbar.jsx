@@ -7,7 +7,7 @@ const CustomNavbar = ({ cities = [] }) => {
     <Navbar bg="dark" expand="lg" data-bs-theme="dark">
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand>City Explorer</Navbar.Brand>
+          <Navbar.Brand>Explore Cities</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -16,12 +16,7 @@ const City = ({ cities }) => {
       <h1>{city.name}</h1>
       <h2>Features</h2>
       {city.features.map((feature, index) => (
-        <Button
-          key={index}
-          onClick={() => navigate(`feature/${feature.id}`)}
-          variant="secondary"
-          className="m-2"
-        >
+        <Button key={index} onClick={() => navigate(`feature/${feature.id}`)} variant="secondary" className="m-2">
           {feature.name}
         </Button>
       ))}
