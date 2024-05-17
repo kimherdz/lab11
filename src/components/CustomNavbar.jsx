@@ -3,7 +3,7 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const CustomNavbar = ({ cities }) => {
+const CustomNavbar = ({ cities = [] }) => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
