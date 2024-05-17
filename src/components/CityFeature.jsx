@@ -7,14 +7,10 @@ const CityFeature = ({ cities }) => {
   const city = cities.find(c => c.id === parseInt(cityId));
   const feature = city.features.find(f => f.id === parseInt(featureId));
 
-  if (!city || !feature) {
-    return <div>Feature not found</div>;
-  }
-
   return (
     <Container>
       <h1>{feature.name}</h1>
-      <p>{feature.description}</p>
+      <h5>{feature.description}</h5>
     </Container>
   );
 };
