@@ -3,10 +3,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 
 const Home = ({ cities }) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const searchParams = new URLSearchParams(location.search);
-  const query = searchParams.get('search') || '';
+  const loca = useLocation();
+  const nav = useNavigate();
+  const params = new URLSearchParams(loca.search);
+  const query = params.get('search') || '';
   const filteredCities = cities.filter(city => city.name.toLowerCase().includes(query.toLowerCase()));
 
   return (
@@ -18,7 +18,7 @@ const Home = ({ cities }) => {
             <Card>
               <Card.Body>
                 <Card.Title>{city.name}</Card.Title>
-                <Button onClick={() => navigate(`/city/${city.id}`)} variant="secondary">
+                <Button onClick={() => nav(`/city/${city.id}`)} variant="secondary">
                   Explore
                 </Button>
               </Card.Body>

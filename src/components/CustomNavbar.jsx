@@ -1,24 +1,18 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 
 const CustomNavbar = ({ cities = [] }) => {
   return (
     <Navbar bg="dark" expand="lg" data-bs-theme="dark">
       <Container>
-        <LinkContainer to="/">
-          <Navbar.Brand>Explore Cities</Navbar.Brand>
-        </LinkContainer>
+          <Navbar.Brand as={Link} to="/">Explore Cities</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <LinkContainer to="/">
-              <Nav.Link>Home</Nav.Link>
-            </LinkContainer>
+          <Nav className="mr-auto">
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             {cities.map(city => (
-              <LinkContainer key={city.id} to={`/city/${city.id}`}>
-                <Nav.Link>{city.name}</Nav.Link>
-              </LinkContainer>
+              <Nav.Link key={city.id} as={Link} to={`/city/${city.id}`}>{city.name}</Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>
